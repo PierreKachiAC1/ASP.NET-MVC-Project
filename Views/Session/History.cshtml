@@ -1,0 +1,51 @@
+﻿@model IEnumerable<FinalProject.Models.ViewModels.SessionViewModel>
+@{
+    ViewData["Title"] = "Create Sessions";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewData["Title"]</title>
+</head>
+<body>
+    <h2>Sessiom History</h2>
+
+    <form asp-action="Create">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        @{
+        }
+
+        @foreach (var session in Model)
+        {
+            @if(session.Active){
+            <div class="session">
+                <div>
+                    <strong>Start Date:</strong> @session.StartDate
+                </div>
+                <div>
+                    <strong>End Date:</strong> @session.EndDate
+                </div>
+                <div>
+                    <strong>Location:</strong> @session.Location
+                </div>
+                <div>
+                    <strong>Purpose:</strong> @session.Purpose
+                </div>
+                <div class="form-group">
+                        <a asp-action="Create" asp-controller="Attendance" asp-route-sessionId="@session.Id" class="btn btn-primary">Record Attendance</a>
+                        <a asp-action=Delete(@session.Id) asp-controller="Session" class="btn btn-secondary" style="background-color:red">Delete</a>
+
+                </div>
+            </div>
+            <br /> 
+            }   }
+
+        <div class="form-group">
+            <a href="Index" class="btn btn-secondary">Current Sessions</a>
+            <a href="Create" class="btn btn-secondary">Create</a>
+
+        </div>
+    </form>
+</body>
+</html>

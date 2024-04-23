@@ -1,0 +1,41 @@
+﻿@model FinalProject.Models.ViewModels.AttendanceViewModel
+
+<h2>Edit Attendance</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    @Html.HiddenFor(model => model.SessionId)
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.SessionId)
+        @Html.TextBoxFor(model => model.SessionId, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.SessionId)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.UserId)
+        @Html.TextBoxFor(model => model.UserId, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.UserId)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Present)
+        @Html.CheckBoxFor(model => model.Present)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.AttendanceDateTime)
+        @Html.TextBoxFor(model => model.AttendanceDateTime, "{0:yyyy-MM-dd}", new { @class = "form-control", type="date" })
+        @Html.ValidationMessageFor(model => model.AttendanceDateTime)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Remarks)
+        @Html.TextAreaFor(model => model.Remarks, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Remarks)
+    </div>
+
+    <button type="submit" class="btn btn-success">Update</button>
+}
