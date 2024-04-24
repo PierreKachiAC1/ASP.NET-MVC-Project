@@ -10,6 +10,13 @@ GeeksForGeeks
 ChatGpt
 Teddy Smith ASP.NET MVC Playlist:https://www.youtube.com/watch?v=q2AcJmB03Io&list=PL82C6-O4XrHde_urqhKJHH-HTUfTK6siO
 
+## Dependencies
+Microsoft.AspNetCore.Identity.EntityFramework:6.0
+Microsoft.AspNetCore.Identity.UI:6.0
+Microsoft.EntityFrameworkCore.Tools:7.02
+Microsoft.Extensions.Hosting:8.0
+Pomelo.EntityFrameworkCore.MySql:7.00
+
 ## Features
 
 - **User Authentication**: Secure login and registration system.
@@ -83,22 +90,6 @@ dotnet ef database update
 - Restore NuGet packages.
 - Run the application (F5).
 
-## Usage
 
-- **Home Page**: Accessed at the root URL. Provides links to other functionalities.
-- **Register**: Accessed via `/Register`. New users can create an account.
-- **Login**: Accessed via `/Login`. Users can log into the application.
-- **Session Management**: Create and manage sessions once logged in.
-- **Attendance Tracking**: Users can mark and view attendance.
 
-## Contributing
 
-Contributors are welcome. Please fork the repository and submit pull requests with your changes.
-
-## License
-
-[MIT](LICENSE.md)
-
----
-
-This README aims to be comprehensive but may still need adjustments based on your specific project requirements and any additional functionalities or changes you make to the project. Adjust accordingly to fit the detailed aspects of your development and operational environment.
