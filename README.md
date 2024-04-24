@@ -5,7 +5,7 @@
 This project is an ASP.NET Core MVC application designed to manage sessions and attendance. It supports user registration, authentication, session management, and attendance tracking, with different functionalities available based on user roles.
 
 ## References
-Usj Course Documentation.
+- Usj Course Documentation.
 GeeksForGeeks.
 ChatGpt.
 Teddy Smith ASP.NET MVC Playlist:https://www.youtube.com/watch?v=q2AcJmB03Io&list=PL82C6-O4XrHde_urqhKJHH-HTUfTK6siO .
